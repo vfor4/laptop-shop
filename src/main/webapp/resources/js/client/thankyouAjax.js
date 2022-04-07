@@ -1,0 +1,35 @@
+calculateOrder()
+function calculateOrder()
+{
+	var element = document.getElementsByClassName("total");
+	var res = 0;
+	for (i = 0; i < element.length; i++) {
+		res = res + parseInt(element[i].textContent);
+	}
+	var element2 = document.getElementById("ordertotal");
+	
+	resConvert = accounting.formatMoney(res);
+	element2.innerHTML = resConvert+ " VND";
+	
+	var element3 = document.getElementById("tongGiaTri");
+	if(element3!= null){
+		element3.setAttribute("value",res);
+	}
+	if(res == 0)
+	{
+		document.getElementById("submit").disabled = true;		
+	}	
+}
+formatAddress()
+function formatAddress(){
+	
+	let fullAddress = document.getElementById("address").innerHTML
+	
+	const obj = JSON.parse(fullAddress.split("</b>")[1]);
+	// alert(obj.wardName)
+	let formatAddress = "<b>Địa chỉ: </b>" + 
+	obj.address + " - " + obj.wardName + " - " +
+	obj.districtName + " - " + obj.provinceName
+	document.getElementById("address").innerHTML = formatAddress
+	// alert(formatAddress)
+}

@@ -1,0 +1,35 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch test",
+            "request": "launch",
+            "mainClass": "com.laptopshop.api.admin.test",
+            "projectName": "laptop-shop"
+        },
+        {
+            "type": "java",
+            "name": "Launch SecurityConfig",
+            "request": "launch",
+            "mainClass": "com.laptopshop.config.SecurityConfig",
+            "projectName": "laptop-shop"
+        },
+        {
+            "type": "java",
+            "name": "Launch RSAUtil",
+            "request": "launch",
+            "mainClass": "com.laptopshop.ulti.RSAUtil",
+            "projectName": "laptop-shop"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-LaptopShopApplication<laptop-shop>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.laptopshop.LaptopShopApplication",
+            "projectName": "laptop-shop",
+            "args": ""
+        }
+    ]
+}
