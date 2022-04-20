@@ -44,7 +44,7 @@ public class DataSeeder implements ApplicationListener<ContextRefreshedEvent> {
 		if (userRepository.findByEmail("admin@gmail.com") == null) {
 			NguoiDung admin = new NguoiDung();
 			admin.setEmail("admin@gmail.com");
-			admin.setPassword(passwordEncoder.encode("123456"));
+			admin.setPassword(passwordEncoder.encode("Aa@123456"));
 			admin.setHoTen("Trần Đặng Vũ");
 			admin.setSoDienThoai("0369680567");
 			HashSet<VaiTro> roles = new HashSet<>();
@@ -58,7 +58,7 @@ public class DataSeeder implements ApplicationListener<ContextRefreshedEvent> {
 			NguoiDung member = new NguoiDung();
 			member.setHoTen("nguoi mua hang");
 			member.setEmail("member@gmail.com");
-			member.setPassword(passwordEncoder.encode("123456"));
+			member.setPassword(passwordEncoder.encode("Aa@123456"));
 			member.setSoDienThoai("0369680566");
 			HashSet<VaiTro> roles = new HashSet<>();
 			roles.add(roleRepository.findByTenVaiTro("ROLE_MEMBER"));
@@ -67,16 +67,16 @@ public class DataSeeder implements ApplicationListener<ContextRefreshedEvent> {
 		}
 		
 		// Shipper account
-		if (userRepository.findByEmail("shipper@gmail.com") == null) {
-			NguoiDung member = new NguoiDung();
-			member.setHoTen("nguoi giao hang");
-			member.setEmail("shipper@gmail.com");
-			member.setPassword(passwordEncoder.encode("123456"));
-			member.setSoDienThoai("0369680565");
-			HashSet<VaiTro> roles = new HashSet<>();
-			roles.add(roleRepository.findByTenVaiTro("ROLE_SHIPPER"));
-			member.setVaiTro(roles);
-			userRepository.save(member);
-		}
+		// if (userRepository.findByEmail("shipper@gmail.com") == null) {
+		// 	NguoiDung member = new NguoiDung();
+		// 	member.setHoTen("nguoi giao hang");
+		// 	member.setEmail("shipper@gmail.com");
+		// 	member.setPassword(passwordEncoder.encode("123456"));
+		// 	member.setSoDienThoai("0369680565");
+		// 	HashSet<VaiTro> roles = new HashSet<>();
+		// 	roles.add(roleRepository.findByTenVaiTro("ROLE_SHIPPER"));
+		// 	member.setVaiTro(roles);
+		// 	userRepository.save(member);
+		// }
 	}
 }

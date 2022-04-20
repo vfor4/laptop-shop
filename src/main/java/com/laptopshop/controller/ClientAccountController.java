@@ -65,7 +65,7 @@ public class ClientAccountController {
 		NguoiDung currentUser = getSessionUser(res);
 		model.addAttribute("user", currentUser);
 		List<DonHang> list = Lists.reverse(donHangService.getDonHangByNguoiDung(currentUser));
-		System.out.println(" user: " + currentUser);
+		// System.out.println(" user: " + currentUser);
 		
 		model.addAttribute("list", list);
 		return "client/account";

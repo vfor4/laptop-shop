@@ -202,7 +202,7 @@ $(document).ready(function() {
 			}
 			
 			if(donHang.ngayNhanHang != null){
-				$("#ngayNhanHang").text("Ngày nhận: "+ donHang.ngayNhanHang);
+				$("#ngayNhanHang").text("Ngày tạo đơn: "+ donHang.ngayNhanHang);
 			}
 			
 			if(donHang.ghiChu != null){

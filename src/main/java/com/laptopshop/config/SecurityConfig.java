@@ -23,7 +23,7 @@ import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 import org.springframework.security.web.savedrequest.RequestCache;
 
 @Configuration
-@EnableWebSecurity(debug = true)
+@EnableWebSecurity()
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 
@@ -93,7 +93,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/admin/**").hasRole("ADMIN")
 				.antMatchers("/admin").hasRole("ADMIN")
 				.antMatchers("/user/**").hasAnyRole("MEMBER", "ADMIN")
-				.antMatchers("/api/gio-hang/addSanPham/**").permitAll()
+				.antMatchers("/api/gio-hang/**").permitAll()
 				.antMatchers("/api/san-pham/latest").permitAll()
 				.antMatchers("/api/danh-muc/allForReal").permitAll()
 				.antMatchers("/api/tai-khoan/**").permitAll()

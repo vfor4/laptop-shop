@@ -149,6 +149,7 @@ public class GioHangApi {
 	@GetMapping("/deleteFromCart")
 	public ResponseObject deleteSanPham(@RequestParam String id, HttpServletRequest request,
 			HttpServletResponse response) {
+				System.out.print("hi there" + id);
 		NguoiDung currentUser = getSessionUser(request);
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		ResponseObject ro = new ResponseObject();

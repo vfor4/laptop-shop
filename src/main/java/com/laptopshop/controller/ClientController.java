@@ -114,7 +114,15 @@ public class ClientController {
 	}
 
 	@GetMapping("/store")
-	public String storePage(@RequestParam(defaultValue = "1") int page,@RequestParam(defaultValue = "") String range,@RequestParam(defaultValue = "") String brand,@RequestParam(defaultValue = "") String manufactor,@RequestParam(defaultValue = "") String os,@RequestParam(defaultValue = "") String ram,@RequestParam(defaultValue = "") String pin,Model model) {		
+	public String storePage(@RequestParam(defaultValue = "1") int page,
+	@RequestParam(defaultValue = "") String range,
+	@RequestParam(defaultValue = "") String brand,
+	@RequestParam(defaultValue = "") String manufactor,
+	@RequestParam(defaultValue = "") String os,
+	@RequestParam(defaultValue = "") String ram,
+	@RequestParam(defaultValue = "") String pin,
+	Model model) {	
+		// System.out.println("nhan hieu: " + brand);	
 		SearchSanPhamObject obj = new SearchSanPhamObject();
 		obj.setBrand(brand);
 		obj.setDonGia(range);

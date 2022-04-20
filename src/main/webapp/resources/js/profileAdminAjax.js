@@ -39,7 +39,7 @@ $(document).ready(function(){
 	    	 var data = $('.formDoiMatKhau').serializeFormJSON();   	 
 	    	 // do post
 	    	 $.ajax({
-	     		async:false,
+	     		async: false,
 	 			type : "POST",
 	 			contentType : "application/json",
 	 			url : "http://localhost:8080/api/profile/doiMatKhau",

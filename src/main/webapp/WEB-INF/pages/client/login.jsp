@@ -53,9 +53,9 @@
 				
 				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 				
-                <label style="padding-right: 130px; font-size: 15px;" id="label">
+                <!-- <label style="padding-right: 130px; font-size: 15px;" id="label">
                     <input type="checkbox" class="form-check-input" id="" name="remember-me">
-                     Duy trì đăng nhập</label>
+                     Duy trì đăng nhập</label> -->
 				
 				<input id="submit" type="submit" value="ĐĂNG NHẬP">
 				<p class="message" style="font-size: 18; padding-top:10px"> Chưa có tài khoản? <a href="<c:url value='/register'/> ">Tạo tài khoản mới</a></p>

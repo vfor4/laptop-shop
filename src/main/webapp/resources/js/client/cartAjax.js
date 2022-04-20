@@ -18,6 +18,7 @@ function changeQuanity(id,value,price)
 
 function deleteFromCart(id)
 {
+	alert(id);
 	$.ajax({
 		type: "GET",		
 		url: "http://localhost:8080/api/gio-hang/deleteFromCart?id="+id,
@@ -25,6 +26,7 @@ function deleteFromCart(id)
 		    var element = document.getElementById("item"+id);
 			element.parentNode.removeChild(element);
 			calculateOrder();
+			console.log(result)
 		},
 		error : function(e){
 			alert("Error: ",e);

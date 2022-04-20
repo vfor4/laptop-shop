@@ -72,13 +72,13 @@
 				sản phẩm</button>
 		</form>
 
-		<div class="form-group form-inline"
+		<!-- <div class="form-group form-inline"
 			style="float: right; margin-right: 10px; top: -33px; position: relative;"">
 			<input class="form-control" type="text" id="searchById"
 				placeholder="Nhập mã để tìm nhanh"> <span
 				class="glyphicon glyphicon-search" aria-hidden="true"
 				style="left: -30px; top: 4px;"></span>
-		</div>
+		</div> -->
 
 		<hr />
 		<table class="table table-hover sanPhamTable "

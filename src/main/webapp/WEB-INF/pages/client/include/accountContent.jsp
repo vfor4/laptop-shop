@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <%@page session="false"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -52,7 +53,7 @@
 					<tr>
 						<th>Mã đơn hàng</th>
 						<th>Ngày mua</th>
-						<th>Ngày giao hàng</th>
+						<th>Ngày tạo đơn</th>
 						<th>Ngày nhận hàng</th>
 						<th>Sản phẩm</th>
 						<th>Tổng tiền</th>
@@ -62,11 +63,9 @@
 					<c:forEach var="donHang" items="${list}" varStatus="loop">
 						<tr style="text-align: center;">
 							<td>${donHang.id}</td>
-							<td>${donHang.ngayDatHang}</td>
-
-							<td>${donHang.ngayGiaoHang}</td>
-
-							<td>${donHang.ngayNhanHang}</td>
+							<td> <fmt:formatDate type = "both" pattern="dd-MM-yyyy HH:mm" value = "${donHang.ngayDatHang}" /></td>
+							<td><fmt:formatDate type = "both" pattern="dd-MM-yyyy HH:mm" value = "${donHang.ngayNhanHang}" /></td>
+							<td><fmt:formatDate type = "both" pattern="dd-MM-yyyy HH:mm" value = "${donHang.ngayGiaoHang}" /></td>
 
 							<%-- 							<c:set var="tongGiaTri"
 								value="${tongGiaTri + chiTiet.soLuongNhanHang*chiTiet.donGia}" /> --%>
@@ -95,7 +94,14 @@
 								</c:forEach></td>
 
 							<td class="tongGiaTri">${tongGiaTri}</td>
-							<td>${donHang.trangThaiDonHang}</td>
+							  <c:choose>
+								<c:when test='${donHang.trangThaiDonHang == "Hoàn thành"}'>
+									<td>Đã tạo đơn</td>
+								</c:when>    
+								<c:otherwise>
+									<td>${donHang.trangThaiDonHang}</td>
+								</c:otherwise>
+							</c:choose>
 						</tr>
 					</c:forEach>
 				</table>

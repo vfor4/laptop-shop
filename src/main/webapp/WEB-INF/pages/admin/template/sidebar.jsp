@@ -22,12 +22,12 @@
          
           <li class="side-bar tmargin">
             <a href="<c:url value='/admin/don-hang' />">
-              <span class="glyphicon glyphicon-shopping-cart">&nbsp;</span>Quản lý Đơn hàng</a>
+              <span class="glyphicon glyphicon-shopping-cart">&nbsp;</span>Quản lý Đơn Hàng</a>
           </li>
         
           <li class="side-bar">
             <a href='<c:url value="/admin/san-pham"/>' >
-              <span class="glyphicon glyphicon-folder-open">&nbsp;</span>Quản lý Sản phẩm</a>
+              <span class="glyphicon glyphicon-folder-open">&nbsp;</span>Quản Lý Sản Phẩm</a>
           </li>
         
           <li class="side-bar">
@@ -37,12 +37,12 @@
           
           <li class="side-bar">
             <a href='<c:url value="/admin/nhan-hieu"/>' >
-              <span class="glyphicon glyphicon-flag">&nbsp;</span>Quản lý Nhãn hiệu</a>
+              <span class="glyphicon glyphicon-flag">&nbsp;</span>Quản lý Nhãn Hiệu</a>
           </li>
 
           <li class="side-bar main-menu">
             <a href="<c:url value='/admin/tai-khoan' />">
-              <span class="glyphicon glyphicon-th-list">&nbsp;</span>Quản lý Tài khoản</a>
+              <span class="glyphicon glyphicon-th-list">&nbsp;</span>Quản Lý Tài Khoản</a>
           </li>
           
           <li class="side-bar main-menu">
@@ -57,7 +57,7 @@
           
           <li class="side-bar">
             <a href="<c:url value='/admin/profile' />">
-              <span class="glyphicon glyphicon-user">&nbsp;</span>Thông tin cá nhân</a>
+              <span class="glyphicon glyphicon-user">&nbsp;</span>Thông Tin Cá Nhân</a>
           </li>
 
         </ul>

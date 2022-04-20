@@ -89,6 +89,7 @@ public class CheckOutController {
 				}
 				
 			}
+			System.out.print("loi roi nha");
 			listsp = sanPhamService.getAllSanPhamByList(idList);
 		}else     //Lay tu database
 		{
@@ -137,7 +138,7 @@ public class CheckOutController {
 	
 		if(auth == null || auth.getPrincipal() == "anonymousUser")     //Lay tu cookie
 		{
-			DonHang d = donHangService.save(donhang);
+			
 			Cookie cl[] = req.getCookies();		
 			Set<Long> idList = new HashSet<Long>();
 			for(int i=0; i< cl.length; i++)
@@ -148,7 +149,9 @@ public class CheckOutController {
 					quanity.put(Long.parseLong(cl[i].getName()), cl[i].getValue());  
 				}	
 			}
+			DonHang d = donHangService.save(donhang);
 			listsp = sanPhamService.getAllSanPhamByList(idList);
+			
 			for(SanPham sp: listsp)
 			{
 				ChiTietDonHang detailDH = new ChiTietDonHang();

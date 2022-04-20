@@ -106,8 +106,8 @@
 										class="form-control" name="hoTen" required="required" />
 								</div>
 								<div class="form-group">
-									<label for="name">Số điện thoại</label> <input type="text"
-										class="form-control" name="soDienThoai" required="required" />
+									<label for="name">Số điện thoại</label> <input type="number"
+										class="form-control" name="soDienThoai" pattern="(0[3|5|7|8|9])+([0-9]{8})\b" required="required" />
 								</div>
 								<div class="form-group">
 									<label for="name">Địa chỉ</label> <input type="text"
